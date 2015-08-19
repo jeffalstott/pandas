@@ -3394,8 +3394,8 @@ It is possible to write an ``HDFStore`` object that can easily be imported into 
                             index=range(100))
    df_for_r.head()
 
-   store_export = HDFStore('export.h5')
-   store_export.append('df_for_r', df_for_r, data_columns=df_dc.columns)
+   store_export = pd.HDFStore('export.h5')
+   store_export.append('df_for_r', df_for_r, data_columns=df_for_r.columns)
    store_export
 
 .. ipython:: python
